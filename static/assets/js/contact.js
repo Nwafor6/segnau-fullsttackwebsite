@@ -5,7 +5,7 @@ $(document).ready(function() {
         console.log($("#email").val())
         $.ajax({
             type:"POST",
-            url:`https://segnau.pythonanywhere.com/contact-us/`,
+            url:`http://127.0.0.1:8000/contact-us/`,
             data:{
                 "email":$("#email").val(),
                 "name":$("#name").val(),
@@ -19,7 +19,7 @@ $(document).ready(function() {
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 `)
-                document.getElementsByClassName("email-form").reset()
+                document.getElementByClassName("email-form").reset()
             },
             error:function(err){
                 console.log(err)
