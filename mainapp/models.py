@@ -25,3 +25,19 @@ class Newsletter(models.Model):
     
     def __str__(self):
         return self.email
+
+
+class   Membership(models.Model):
+    full_name=models.CharField(max_length=50)
+    email=models.EmailField()
+    course_of_study=models.CharField(max_length=100)
+    university=models.CharField(max_length=100)
+    excepted_year_of_graduation=models.DateTimeField()
+    address=models.CharField(max_length=100)
+    date_of_birth=models.DateTimeField()
+    gender=models.CharField(max_length=100, choices=(("Male","Male"),("Female", "Female"),( "Others", "others")))
+    phone_number=models.CharField(max_length=20)
+    payment_slip=models.ImageField(upload_to="payment_slip")
+
+    def __str__(self):
+        return self.full_name

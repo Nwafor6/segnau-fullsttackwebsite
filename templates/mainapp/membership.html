@@ -1,0 +1,115 @@
+{%extends "partials/base.html"%}
+{%load static%}
+{%block title%}Membership{%endblock%}
+{%block content%}
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Membership Form</h2>
+          <ol>
+            <li><a href="{%url 'home'%}">Home</a></li>
+            <li>Membership</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-speaker"></i>
+                  <h3>Quick Note</h3>
+                  <!-- <p> This form is for new member willing to join </p><br>
+                    Society of Exploaration Geological.<br> -->
+                    This registration may take  2-3 days. <br> kindly, Keep up with your mail.<br><br></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form  method="post" role="form" enctype="multipart/form-data">
+                {%csrf_token%}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="course_of_study" class="form-control" id="course_of_study" placeholder="Course of study" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" class="form-control" name="university" id="university" placeholder="university" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                    <small>Expected year of graduation</small>
+                  <input type="date" name="excepted_year_of_graduation" class="form-control" id="excepted_year_of_graduation" placeholder="Year of graduation" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <small>Date of birth</small>
+                  <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" placeholder="Date of birth" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                    <select class="form-select" id="validationDefault04" name="gender" required>
+                        <option selected disabled value="">Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                      </select>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="tel" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="address" id="address" placeholder="Address" required>
+              </div>
+              <div class="form-group mt-3">
+                <small>Attach payment slip</small>
+                <input type="file" class="form-control" name="payment_slip" id="payment_slip"  required>
+              </div>
+              <div class="success_mesage mt-3">
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{ message }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+              </div>
+              <div class="text-center mt-3"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+{%endblock%}
