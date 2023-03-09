@@ -19,7 +19,7 @@ $(document).ready(function() {
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 `)
-                document.getElementById("email-form").reset()
+                document.getElementsByClassName("email-form").reset()
             },
             error:function(err){
                 console.log(err)
