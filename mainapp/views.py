@@ -40,7 +40,7 @@ def ContactPageView(request):
         message=request.POST["message"]
         email_message = send_mail(subject=subject, message=message,
             from_email="nwaforglory6@gmail.com",
-            recipient_list=[email],
+            recipient_list=["nwaforglory6@gmail.com"],
         )
         # email_message.send()
         return JsonResponse({"detail":"Mail send successfully."})
