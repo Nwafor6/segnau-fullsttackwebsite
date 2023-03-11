@@ -20,6 +20,28 @@ class HomePageView(TemplateView):
 class AboutPageView(TemplateView):
     template_name="mainapp/about.html"
 
+class OutreachPageView(TemplateView):
+    template_name="mainapp/outreach.html"
+
+class ChallengebowlPageView(TemplateView):
+    template_name="mainapp/seg-challengebowl.html"
+
+class ComferencesPageView(TemplateView):
+    template_name="mainapp/seg-conferences.html"
+
+class FieldcampsPageView(TemplateView):
+    template_name="mainapp/seg-fieldcamps.html"
+
+class ScholarshipPageView(TemplateView):
+    template_name="mainapp/seg-scholarships.html"
+
+class SymposiumPageView(TemplateView):
+    template_name="mainapp/seg-symposium.html"
+
+class workshopPageView(TemplateView):
+    template_name="mainapp/webinars-workshop.html"
+
+
 class BlogsPageView(ListView):
     template_name="mainapp/blog.html"
     model=Blog
