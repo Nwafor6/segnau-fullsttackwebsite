@@ -1,3 +1,30 @@
 .logo_bg{
     border-radius: 20px;
 }
+.btn_holder{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.3333333;
+    background-image: none;
+    background-color: #2b4659;
+    border-radius: 0px;
+    border-color: #2b4659;
+    margin-bottom: 15px;
+    padding: 7px;
+    color: white;
+}
+.btn_holder a{
+    text-decoration: none;
+    color: white;
+}
+
+.entry-img img{
+    height: 100px;
+    width: 250px;
+}
+@media(max-width:767px){
+    .entry-img img{
+        height: 100%;
+        width:100%;
+    }
+}

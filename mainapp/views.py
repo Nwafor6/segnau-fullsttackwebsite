@@ -14,7 +14,9 @@ from django.template.loader import render_to_string
 
 # Create your views here.
 
-class HomePageView(TemplateView):
+class HomePageView(ListView):
+    model=Blog
+    context_object_name="blogs"
     template_name="mainapp/index.html"
 
 class AboutPageView(TemplateView):
