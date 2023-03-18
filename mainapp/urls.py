@@ -15,5 +15,6 @@ urlpatterns=[
     path("leadership-symposium/", views.SymposiumPageView.as_view(), name="symposium"),
     path("workshop&webniars/", views.workshopPageView.as_view(), name="workshop"),
     path("membership/", views.membershipView, name="membership"),
+    path("mentorship/", views.MentorshipView.as_view(), name="mentorship"),
     path("blog/<slug:slug>/", views.BlogDetailPageView.as_view(), name="blog-detail"),
 ]

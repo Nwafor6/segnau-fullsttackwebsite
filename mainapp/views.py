@@ -43,6 +43,10 @@ class SymposiumPageView(TemplateView):
 class workshopPageView(TemplateView):
     template_name="mainapp/webinars-workshop.html"
 
+class MentorshipView(TemplateView):
+
+    template_name="mainapp/mentorship.html"
+
 
 class BlogsPageView(ListView):
     template_name="mainapp/blog.html"
