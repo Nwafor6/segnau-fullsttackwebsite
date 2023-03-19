@@ -5,7 +5,7 @@ $(document).ready(function() {
         console.log($("#email").val())
         $.ajax({
             type:"POST",
-            url:`http://127.0.0.1:8000/subscribe/`,
+            url:`https://segnau.pythonanywhere.com/subscribe/`,
             data:{
                 "email":$("#email").val()
             },

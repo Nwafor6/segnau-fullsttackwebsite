@@ -133,4 +133,12 @@ def Subscribe(request):
         # Send the email
         email_message.send()
     return JsonResponse({"detail":"Thank you for subscribing."})
+
+
+def handler404(request, exception):
+    return render(request, 'mainapp/404.html', status=404)
     
+def handler500(request, *args, **argv):
+    return render(request, 'mainapp/500.html', status=500)
+
+ghcf
