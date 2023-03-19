@@ -140,5 +140,3 @@ def handler404(request, exception):
     
 def handler500(request, *args, **argv):
     return render(request, 'mainapp/500.html', status=500)
-
-ghcf
