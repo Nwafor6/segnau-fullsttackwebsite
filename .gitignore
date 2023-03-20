@@ -128,4 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 staticfiles
-media
+mediapassenger_wsgi.py
+tmp
+passenger_wsgi.py git status
